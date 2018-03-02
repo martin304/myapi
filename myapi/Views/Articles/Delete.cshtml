@@ -1,0 +1,128 @@
+﻿@model myapi.Models.Article
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Article</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstCategory)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FirstCategory)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SecondCategory)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SecondCategory)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ThirdCategory)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ThirdCategory)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Author)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Author)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Source)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Source)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.pubable)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.pubable)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.show)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.show)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.puborder)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.puborder)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ViewCount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ViewCount)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UploadTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UploadTime)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

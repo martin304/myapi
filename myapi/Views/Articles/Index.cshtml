@@ -1,0 +1,107 @@
+﻿@model IEnumerable<myapi.Models.Article>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecondCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThirdCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Source)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pubable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.show)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.puborder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ViewCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadTime)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThirdCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pubable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.show)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.puborder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UploadTime)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ArticleId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ArticleId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ArticleId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
